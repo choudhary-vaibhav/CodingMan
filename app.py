@@ -17,7 +17,19 @@ def update(letter, word, text):
     u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
     return word
 
+def win(word, text):
+    word = list(word)
+    text = list(text)
+    flag = 1
 
+    for i in range(len(text)):
+        if text[i] != word[2*i]:
+            flag = 0
+            break
+
+    return flag
+
+    
 
 st.markdown("<h1 style='text-align: center; color: royalblue;'>CodingMan</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; '>Customized Hangman For Python Programmers</h3>", unsafe_allow_html=True)
@@ -54,6 +66,8 @@ u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_a
 
 limit = len(text) + 3
 
+t5.image('../CodingMan/pic1.jpeg')
+
 
 letters[0] = t1.text_input(f"Enter a letter:", max_chars = 1, key = 1 )
 word = update(letters[0], word, text)
@@ -75,32 +89,32 @@ if letters[0]:
             
             if letters[3]:
                 count += 1
-                letters[4] = t5.text_input(f"Enter a letter:", max_chars = 1, key = 5 )
+                letters[4] = t1.text_input(f"Enter a letter:", max_chars = 1, key = 5 )
                 word = update(letters[4], word, text)
 
                 if letters[4]:
                     count += 1
-                    letters[5] = t1.text_input(f"Enter a letter:", max_chars = 1, key = 6 )
+                    letters[5] = t2.text_input(f"Enter a letter:", max_chars = 1, key = 6 )
                     word = update(letters[5], word, text)
 
                     if letters[5]:
                         count += 1
-                        letters[6] = t2.text_input(f"Enter a letter:", max_chars = 1, key = 7 )
+                        letters[6] = t3.text_input(f"Enter a letter:", max_chars = 1, key = 7 )
                         word = update(letters[6], word, text)
 
                         if letters[6]:
                             count += 1
-                            letters[7] = t3.text_input(f"Enter a letter:", max_chars = 1, key = 8 )
+                            letters[7] = t4.text_input(f"Enter a letter:", max_chars = 1, key = 8 )
                             word = update(letters[7], word, text)
 
                             if letters[7]:
                                 count += 1
-                                letters[8] = t4.text_input(f"Enter a letter:", max_chars = 1, key = 9 )
+                                letters[8] = t2.text_input(f"Enter a letter:", max_chars = 1, key = 9 )
                                 word = update(letters[8], word, text)
 
                                 if letters[8]:
                                     count += 1
-                                    letters[9] = t5.text_input(f"Enter a letter:", max_chars = 1, key = 10 )
+                                    letters[9] = t3.text_input(f"Enter a letter:", max_chars = 1, key = 10 )
                                     word = update(letters[9], word, text)
 
 
