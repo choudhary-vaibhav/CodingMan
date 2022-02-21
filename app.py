@@ -66,7 +66,7 @@ u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_a
 
 limit = len(text) + 3
 
-t5.image('../CodingMan/pic1.jpeg')
+t5.image('../CodingMan/hangman_pics/pic1.jpeg')
 
 
 letters[0] = t1.text_input(f"Enter a letter:", max_chars = 1, key = 1 )
