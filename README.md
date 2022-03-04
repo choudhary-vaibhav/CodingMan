@@ -6,3 +6,4 @@ Customized Hangman for Python Programmers.
 
 
 Adding list of words still remaining!
+And some problems with its being responsive on other devices!
