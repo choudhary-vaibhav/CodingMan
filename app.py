@@ -71,7 +71,7 @@ u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_a
 
 limit = len(text) + 3
 
-t5.image('../CodingMan/hangman_pics/pic1.jpeg')
+t5.image('hangman_pics/pic1.jpeg')
 
 
 letters[0] = t1.text_input(f"Enter a letter:", max_chars = 1, key = 1 )
@@ -148,15 +148,14 @@ if letters[0]:
                                     
 
 if lose == 1:
-    t5.image('../CodingMan/hangman_pics/pic2.jpeg')
+    t5.image('hangman_pics/pic2.jpeg')
 elif lose == 2:
-    t5.image('../CodingMan/hangman_pics/pic3.jpeg')
+    t5.image('hangman_pics/pic3.jpeg')
 elif lose == 3:
-    t5.image('../CodingMan/hangman_pics/pic4.jpeg')
+    t5.image('hangman_pics/pic4.jpeg')
 elif lose == 4:
-    t5.image('../CodingMan/hangman_pics/pic5.jpeg')
+    t5.image('hangman_pics/pic5.jpeg')
 
-st.write(win)
 
 
 
